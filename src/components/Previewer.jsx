@@ -15,7 +15,7 @@ const Previewer = ({ markedDownText, previewerIconClicked, setPreviewerIconClick
 				<h4 className="mb-0">Previewer</h4>
 				<button
 					onClick={handleIconClick}
-					className="btn p-1 text-black"
+					className="btn p-1 text-black fw-bold"
 					role="button"
 				>
 					<i className={iconStyles}></i>
