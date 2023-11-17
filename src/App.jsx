@@ -22,7 +22,7 @@ export default function App() {
 	}, [inputValue]);
 
 	return (
-		<div className="container-xl">
+		<div className="container-fluid" style={{height:'100vh', background:'-webkit-linear-gradient(45deg, purple, wheat 80%)'}}>
 			<div className="w-100 p-1">
 				<h3 className="text-center" style={{ cursor: "default" }}>
 					Markdown Previewer
