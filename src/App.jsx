@@ -5,7 +5,8 @@ import { marked } from "marked";
 
 let defaultInput = `<h1>My name is Israel</h1><h2>I love anime, chess, snooker and lots more</h2>
 <a href='https://www.google.com'>google.com</a>
-<span>you can search stuff usinf the link above</span>
+<h3>you can search stuff using the link above</h3>
+<span>Yikes!</span>
 <pre>code block...</pre>
 <ul>
   <li>Fruits</li>
