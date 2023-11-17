@@ -6,6 +6,9 @@ import { marked } from "marked";
 export default function App() {
 	const [inputValue, setInputValue] = useState("");
 	const [markedDownText, setMarkedDownText] = useState(null);
+	const [editorIconClicked, setEditorIconClicked] = useState(false);
+	const [previewerIconClicked, setPreviewerIconClicked] = useState(false);
+
 	const getMarkdownText = (inputValue) => {
 		let parsedInput = marked.parse(inputValue);
 		return { __html: parsedInput };
@@ -13,10 +16,10 @@ export default function App() {
 	const handleInputChange = (event) => {
 		setInputValue(event.target.value);
 	};
-  useEffect(()=>{
-    let val = getMarkdownText(inputValue);
+	useEffect(() => {
+		let val = getMarkdownText(inputValue);
 		setMarkedDownText(val);
-  },[inputValue])
+	}, [inputValue]);
 
 	return (
 		<div className="container-xl">
@@ -25,12 +28,21 @@ export default function App() {
 					Markdown Previewer
 				</h3>
 			</div>
-			<div className="mt-2 px-5">
-				<Editor inputValue={inputValue} handleInputChange={handleInputChange} />
-			</div>
-			<div className="mt-4 px-2">
-				<Previewer markedDownText={markedDownText} />
-			</div>
+			{!previewerIconClicked && (
+				<Editor
+					inputValue={inputValue}
+					handleInputChange={handleInputChange}
+					editorIconClicked={editorIconClicked}
+					setEditorIconClicked={setEditorIconClicked}
+				/>
+			)}
+			{!editorIconClicked && (
+				<Previewer
+					markedDownText={markedDownText}
+					previewerIconClicked={previewerIconClicked}
+					setPreviewerIconClicked={setPreviewerIconClicked}
+				/>
+			)}
 		</div>
 	);
 }
