@@ -40,7 +40,7 @@ const Editor = ({
 					onChange={handleInputChange}
 					style={textAreaStyles}
 				></textarea>
-				<label htmlFor="editor">type something...</label>
+				<label htmlFor="editor">please feel free to edit the text below...</label>
 			</div>
 		</div>
 	);

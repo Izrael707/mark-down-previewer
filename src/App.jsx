@@ -3,8 +3,18 @@ import Editor from "./components/Editor";
 import Previewer from "./components/Previewer";
 import { marked } from "marked";
 
+let defaultInput = `<h1>My name is Israel</h1><h2>I love anime, chess, snooker and lots more</h2>
+<a href='https://www.google.com'>google.com</a>
+<span>you can search stuff usinf the link above</span>
+<pre>code block...</pre>
+<ul>
+  <li>Fruits</li>
+</ul>
+<img src='' alt='profile img' />
+<strong>dkingisreal@gmail.com</strong>`
+
 export default function App() {
-	const [inputValue, setInputValue] = useState("");
+	const [inputValue, setInputValue] = useState(defaultInput);
 	const [markedDownText, setMarkedDownText] = useState(null);
 	const [editorIconClicked, setEditorIconClicked] = useState(false);
 	const [previewerIconClicked, setPreviewerIconClicked] = useState(false);
