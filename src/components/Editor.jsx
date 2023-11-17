@@ -16,11 +16,11 @@ const Editor = ({
 	const iconStyles = editorIconClicked ? contractIcon : expandIcon;
 
 	const textAreaStyles = editorIconClicked
-		? { height: "80vh" }
+		? { height: "75vh" }
 		: { height: "35vh" };
 
 	return (
-		<div className="mt-2 px-5">
+		<div className="mt-1 px-5">
 			<div className="bg-primary opacity-75 text-white rounded-top px-2 py-1 d-flex justify-content-between align-items-center">
 				<h4 className="mb-0">Editor</h4>
 				<button

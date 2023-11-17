@@ -23,7 +23,7 @@ export default function App() {
 
 	return (
 		<div className="container-xl">
-			<div className="w-100 p-2">
+			<div className="w-100 p-1">
 				<h3 className="text-center" style={{ cursor: "default" }}>
 					Markdown Previewer
 				</h3>
