@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Editor = ({
 	inputValue,
 	handleInputChange,
@@ -8,7 +6,6 @@ const Editor = ({
 }) => {
 	const handleIconClick = () => {
 		setEditorIconClicked(!editorIconClicked);
-		console.log(editorIconClicked);
 	};
 
 	const expandIcon = `bi bi-arrows-angle-expand`;
